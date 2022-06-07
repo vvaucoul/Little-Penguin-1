@@ -1,5 +1,5 @@
 ACTION=="add", \
-SUBSYSTEM="usb", \
+SUBSYSTEM=="usb", \
 ATTRS{bInterfaceClass}=="03", \
 ATTR{bInterfaceProtocol}=="01", \
 MODE="0666", \
