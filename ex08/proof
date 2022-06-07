@@ -1,0 +1,4 @@
+> make && make install && make test
+> sudo ./test
+Write '42Born2Code' into '/dev/reverse'
+Read 'edoC2nroB24' from '/dev/reverse'

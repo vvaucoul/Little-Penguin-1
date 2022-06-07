@@ -1,0 +1,34 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    proof                                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/06/03 12:43:37 by vvaucoul          #+#    #+#              #
+#    Updated: 2022/06/03 12:46:11 by vvaucoul         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+make clean && make && make test && make install && sudo ./test
+
+-- dmesg --
+[juin 3 12:45] Cleaning up misc char driver
+[  +0,038063] Initializing misc char driver with minor number 255
+
+1.
+Open /dev/fortytwo
+
+2.
+Write 'Hello world' in /dev/fortytwo
+Write -1 bytes
+Write '42Born2Code' in /dev/fortytwo
+Write -1 bytes
+Write 'vvaucoul' in /dev/fortytwo
+Write 8 bytes
+
+3.
+Read 'vvaucoul' from /dev/fortytwo, length: 8
+
+-- dmesg --
+[ +27,864015] Cleaning up misc char driver

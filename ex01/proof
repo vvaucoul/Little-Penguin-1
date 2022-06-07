@@ -1,0 +1,6 @@
+> sudo insmod main.ko
+> dmesg | tail -n 1
+    [ 3997.261125] Hello world !
+> sudo rmmod main
+> dmesg | tail -n 1
+    [ 4260.917857] Cleaning up module.

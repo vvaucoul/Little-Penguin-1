@@ -1,0 +1,8 @@
+> sudo ./install.sh
+> "Insert USB Device (Keyboard)"
+
+[74084.350746] USB Keyboard plugged!
+
+> sudo rmmod main
+
+[74096.868292] USB Keyboard unplugged!
