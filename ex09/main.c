@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 10:24:29 by vvaucoul          #+#    #+#             */
-/*   Updated: 2022/06/04 13:38:37 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/06/07 16:43:29 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 #include <linux/seq_file.h>
 #include <linux/poll.h>
 #include <linux/nsproxy.h>
+#include <linux/slab.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("vvaucoul <vvaucoul@student.42.fr>");
@@ -186,15 +187,22 @@ static ssize_t mp_read(struct file *file, char __user *ubuf, size_t count, loff_
     return (ret);
 }
 
-static struct proc_ops mp_ops = {
-    .proc_read = mp_read,
-    .proc_write = mp_write,
+// static const struct proc_ops mp_ops = {
+//     .proc_read = mp_read,
+//     .proc_write = mp_write,
+// };
+
+static struct file_operations fmp_fops = {
+    .owner = THIS_MODULE,
+    .write = mp_write,
+    .read = mp_read,
 };
 
 static int __init init_list_mount_points(void)
 {
     printk(KERN_DEBUG "init_list_mount_points\n");
-    entry = proc_create(PROC_MOUNT_NAME, 0444, NULL, &mp_ops);
+    // entry = proc_create(PROC_MOUNT_NAME, 0444, NULL, &mp_ops);
+    entry = proc_create(PROC_MOUNT_NAME, 0444, NULL, &fmp_fops);
     if (entry == NULL)
     {
         printk(KERN_ERR "Error creating proc entry\n");
