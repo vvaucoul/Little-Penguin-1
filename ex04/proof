@@ -1,8 +1,16 @@
 > sudo ./install.sh
 > "Insert USB Device (Keyboard)"
 
-[74084.350746] USB Keyboard plugged!
+[ 1443.096458] usb 3-2: new full-speed USB device number 7 using xhci_hcd
+[ 1443.435459] usb 3-2: New USB device found, idVendor=1b1c, idProduct=1b39, bcdDevice= 3.08
+[ 1443.435464] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1443.435470] usb 3-2: Product: Corsair Gaming K65 RGB RAPIDFIRE Keyboard 
+[ 1443.435471] usb 3-2: Manufacturer: Corsair
+[ 1443.435472] usb 3-2: SerialNumber: 1600F00DAF4504445C02D7A9F5001BC5
+[ 1443.439955] input: Corsair Corsair Gaming K65 RGB RAPIDFIRE Keyboard  as /devices/pci0000:00/0000:00:15.0/0000:03:00.0/usb3/3-2/3-2:1.0/0003:1B1C:1B39.0004/input/input9
+[ 1443.440237] hid-generic 0003:1B1C:1B39.0004: input,hidraw1: USB HID v1.11 Keyboard [Corsair Corsair Gaming K65 RGB RAPIDFIRE Keyboard ] on usb-0000:03:00.0-2/input0
+[ 1443.461918] USB Keyboard plugged!
 
 > sudo rmmod main
 
-[74096.868292] USB Keyboard unplugged!
+[ 1464.952419] USB Keyboard unplugged!

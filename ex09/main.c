@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 10:24:29 by vvaucoul          #+#    #+#             */
-/*   Updated: 2022/06/07 16:51:13 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:59:35 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,51 @@
 #include <linux/poll.h>
 #include <linux/nsproxy.h>
 #include <linux/slab.h>
+#include <linux/ns_common.h>
+#include <linux/fs_pin.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("vvaucoul <vvaucoul@student.42.fr>");
 MODULE_DESCRIPTION("List all mounted points");
 
-/* REF: https://android.googlesource.com/kernel/common/+/refs/heads/android12-5.4/fs/mount.h */
+/*******************************************************************************
+ *                              LINUX FS/MOUNT.H                               *
+ ******************************************************************************/
+
+/*
+** https://github.com/torvalds/linux/blob/master/fs/mount.h
+*/
+
+/* SPDX-License-Identifier: GPL-2.0 */
+struct mnt_namespace
+{
+    struct ns_common ns;
+    struct mount *root;
+    struct list_head list;
+    spinlock_t ns_lock;
+    struct user_namespace *user_ns;
+    struct ucounts *ucounts;
+    u64 seq;
+    wait_queue_head_t poll;
+    u64 event;
+    unsigned int mounts;
+    unsigned int pending_mounts;
+} __randomize_layout;
+
+struct mnt_pcp
+{
+    int mnt_count;
+    int mnt_writers;
+};
+
+struct mountpoint
+{
+    struct hlist_node m_hash;
+    struct dentry *m_dentry;
+    struct hlist_head m_list;
+    int m_count;
+};
+
 struct mount
 {
     struct hlist_node mnt_hash;
@@ -75,30 +114,79 @@ struct mount
     struct hlist_head mnt_stuck_children;
 } __randomize_layout;
 
-struct ns_common
+#define MNT_NS_INTERNAL ERR_PTR(-EINVAL)
+
+static inline struct mount *real_mount(struct vfsmount *mnt)
 {
-    atomic_long_t stashed;
-    const struct proc_ns_operations *ops;
-    unsigned int inum;
-    refcount_t count;
+    return container_of(mnt, struct mount, mnt);
+}
+
+static inline int mnt_has_parent(struct mount *mnt)
+{
+    return mnt != mnt->mnt_parent;
+}
+
+static inline int is_mounted(struct vfsmount *mnt)
+{
+    return !IS_ERR_OR_NULL(real_mount(mnt)->mnt_ns);
+}
+
+extern struct mount *__lookup_mnt(struct vfsmount *, struct dentry *);
+
+extern int __legitimize_mnt(struct vfsmount *, unsigned);
+extern bool legitimize_mnt(struct vfsmount *, unsigned);
+
+static inline bool __path_is_mountpoint(const struct path *path)
+{
+    struct mount *m = __lookup_mnt(path->mnt, path->dentry);
+    return m && likely(!(m->mnt.mnt_flags & MNT_SYNC_UMOUNT));
+}
+
+extern void __detach_mounts(struct dentry *dentry);
+
+static inline void detach_mounts(struct dentry *dentry)
+{
+    if (!d_mountpoint(dentry))
+        return;
+    __detach_mounts(dentry);
+}
+
+static inline void get_mnt_ns(struct mnt_namespace *ns)
+{
+    refcount_inc(&ns->ns.count);
+}
+
+extern seqlock_t mount_lock;
+
+struct proc_mounts
+{
+    struct mnt_namespace *ns;
+    struct path root;
+    int (*show)(struct seq_file *, struct vfsmount *);
+    struct mount cursor;
 };
 
-/* REF: https://android.googlesource.com/kernel/common/+/refs/heads/android12-5.4/fs/mount.h */
-struct mnt_namespace
+extern const struct seq_operations mounts_op;
+
+extern bool __is_local_mountpoint(struct dentry *dentry);
+static inline bool is_local_mountpoint(struct dentry *dentry)
 {
-    struct ns_common ns;
-    struct mount *root;
-    struct list_head list;
-    /* Namespace's spinlock */
-    spinlock_t ns_lock;
-    struct user_namespace *user_ns;
-    struct ucounts *ucounts;
-    u64 seq;
-    wait_queue_head_t poll;
-    u64 event;
-    unsigned int mounts;
-    unsigned int pending_mounts;
-} __randomize_layout;
+    if (!d_mountpoint(dentry))
+        return false;
+
+    return __is_local_mountpoint(dentry);
+}
+
+static inline bool is_anon_ns(struct mnt_namespace *ns)
+{
+    return ns->seq == 0;
+}
+
+extern void mnt_cursor_del(struct mnt_namespace *ns, struct mount *cursor);
+
+/*******************************************************************************
+ *                                    MAIN                                     *
+ ******************************************************************************/
 
 #define PROC_MOUNT_NAME "mymounts"
 

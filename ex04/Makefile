@@ -6,7 +6,7 @@
 #    By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 15:38:49 by vvaucoul          #+#    #+#              #
-#    Updated: 2022/06/07 15:01:55 by vvaucoul         ###   ########.fr        #
+#    Updated: 2022/06/07 18:13:43 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ all:
 install:
 	@echo "Installing module..."
 	@cp -f usb-driver-udev.rules /etc/udev/rules.d/100-usb-driver-udev.rules
+	@cp -f main.ko /main.ko
 	@make -s reload-udev
 	@echo "Done."
 
