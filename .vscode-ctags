@@ -1,0 +1,169 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+CLASS_NAME	ex05/main.c	/^#define CLASS_NAME /;"	d	file:
+DEVICE_NAME	ex05/main.c	/^#define DEVICE_NAME /;"	d	file:
+DFS_DIR_NAME	ex07/main.c	/^#define DFS_DIR_NAME /;"	d	file:
+DFS_VIRTUAL_FILE_01	ex07/main.c	/^#define DFS_VIRTUAL_FILE_01 /;"	d	file:
+DFS_VIRTUAL_FILE_02	ex07/main.c	/^#define DFS_VIRTUAL_FILE_02 /;"	d	file:
+DFS_VIRTUAL_FILE_03	ex07/main.c	/^#define DFS_VIRTUAL_FILE_03 /;"	d	file:
+MNT_NS_INTERNAL	ex09/main.c	/^#define MNT_NS_INTERNAL /;"	d	file:
+PROC_MOUNT_NAME	ex09/main.c	/^#define PROC_MOUNT_NAME /;"	d	file:
+TEST_FOO_NBR	ex07/main_debugfs_module_test.c	/^#define TEST_FOO_NBR /;"	d	file:
+THREAD_DELAY	ex07/main_debugfs_module_test.c	/^#define THREAD_DELAY /;"	d	file:
+__anon07391330010a	ex09/main.c	/^    {$/;"	u	struct:mount	file:
+__anon07391330020a	ex09/main.c	/^    {$/;"	u	struct:mount	file:
+__exit_hello_cleanup	ex01/main.c	/^static void __exit_hello_cleanup(void)$/;"	f	typeref:typename:void	file:
+__init_hello_init	ex01/main.c	/^static int __init_hello_init(void)$/;"	f	typeref:typename:int	file:
+__path_is_mountpoint	ex09/main.c	/^static inline bool __path_is_mountpoint(const struct path *path)$/;"	f	typeref:typename:bool	file:
+__randomize_layout	ex09/main.c	/^} __randomize_layout;$/;"	v	typeref:struct:mnt_namespace
+__randomize_layout	ex09/main.c	/^} __randomize_layout;$/;"	v	typeref:struct:mount
+all	ex01/Makefile	/^all:$/;"	t
+all	ex04/Makefile	/^all:$/;"	t
+all	ex05/Makefile	/^all:$/;"	t
+all	ex07/Makefile	/^all:$/;"	t
+all	ex08/Makefile	/^all:$/;"	t
+all	ex09/Makefile	/^all:$/;"	t
+class	ex05/main.c	/^static struct class *class = NULL;$/;"	v	typeref:struct:class *	file:
+clean	ex01/Makefile	/^clean:$/;"	t
+clean	ex04/Makefile	/^clean:$/;"	t
+clean	ex05/Makefile	/^clean:$/;"	t
+clean	ex07/Makefile	/^clean:$/;"	t
+clean	ex08/Makefile	/^clean:$/;"	t
+clean	ex09/Makefile	/^clean:$/;"	t
+cleanup_debugfs_module	ex07/main.c	/^static void cleanup_debugfs_module(void)$/;"	f	typeref:typename:void	file:
+cursor	ex09/main.c	/^    struct mount cursor;$/;"	m	struct:proc_mounts	typeref:struct:mount	file:
+d_entry_foo	ex07/main.c	/^struct dentry *d_entry_foo = NULL;$/;"	v	typeref:struct:dentry *
+d_entry_id	ex07/main.c	/^struct dentry *d_entry_id = NULL;$/;"	v	typeref:struct:dentry *
+d_entry_jiffies	ex07/main.c	/^struct dentry *d_entry_jiffies = NULL;$/;"	v	typeref:struct:dentry *
+d_entry_root	ex07/main.c	/^struct dentry *d_entry_root = NULL;$/;"	v	typeref:struct:dentry *
+debugfs_exit	ex07/main.c	/^static void __exit debugfs_exit(void)$/;"	f	typeref:typename:void __exit	file:
+debugfs_init	ex07/main.c	/^static int __init debugfs_init(void)$/;"	f	typeref:typename:int __init	file:
+detach_mounts	ex09/main.c	/^static inline void detach_mounts(struct dentry *dentry)$/;"	f	typeref:typename:void	file:
+device	ex05/main.c	/^static struct device *device = NULL;$/;"	v	typeref:struct:device *	file:
+do_work	ex03/main.c	/^int do_work(int *my_int, int retval)$/;"	f	typeref:typename:int
+entry	ex09/main.c	/^static struct proc_dir_entry *entry;$/;"	v	typeref:struct:proc_dir_entry *	file:
+event	ex09/main.c	/^    u64 event;$/;"	m	struct:mnt_namespace	typeref:typename:u64	file:
+exit_list_mount_points	ex09/main.c	/^static void __exit exit_list_mount_points(void)$/;"	f	typeref:typename:void __exit	file:
+foo_buffer	ex07/main.c	/^static char foo_buffer[PAGE_SIZE];$/;"	v	typeref:typename:char[]	file:
+foo_fops	ex07/main.c	/^const struct file_operations foo_fops = {$/;"	v	typeref:typename:const struct file_operations
+foo_read	ex07/main.c	/^static ssize_t foo_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+foo_srfbuf_size	ex07/main.c	/^size_t foo_srfbuf_size = 0;$/;"	v	typeref:typename:size_t
+foo_write	ex07/main.c	/^static ssize_t foo_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+fops	ex05/main.c	/^const struct file_operations fops = {$/;"	v	typeref:typename:const struct file_operations
+get_mnt_ns	ex09/main.c	/^static inline void get_mnt_ns(struct mnt_namespace *ns)$/;"	f	typeref:typename:void	file:
+get_mounted_path	ex09/main.c	/^static unsigned char *get_mounted_path(char *buff, struct mount *mnt)$/;"	f	typeref:typename:unsigned char *	file:
+get_mounted_points_string	ex09/main.c	/^static char *get_mounted_points_string(size_t *length)$/;"	f	typeref:typename:char *	file:
+id	ex07/main_debugfs_module_test.c	/^    size_t id;$/;"	m	struct:s_t_thread	typeref:typename:size_t	file:
+id_fops	ex07/main.c	/^const struct file_operations id_fops = {$/;"	v	typeref:typename:const struct file_operations
+id_read	ex07/main.c	/^static ssize_t id_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+id_write	ex07/main.c	/^static ssize_t id_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+init_list_mount_points	ex09/main.c	/^static int __init init_list_mount_points(void)$/;"	f	typeref:typename:int __init	file:
+install	ex04/Makefile	/^install:$/;"	t
+install	ex05/Makefile	/^install:$/;"	t
+install	ex07/Makefile	/^install:$/;"	t
+install	ex08/Makefile	/^install:$/;"	t
+install	ex09/Makefile	/^install:$/;"	t
+is_anon_ns	ex09/main.c	/^static inline bool is_anon_ns(struct mnt_namespace *ns)$/;"	f	typeref:typename:bool	file:
+is_local_mountpoint	ex09/main.c	/^static inline bool is_local_mountpoint(struct dentry *dentry)$/;"	f	typeref:typename:bool	file:
+is_mounted	ex09/main.c	/^static inline int is_mounted(struct vfsmount *mnt)$/;"	f	typeref:typename:int	file:
+jiffies_fops	ex07/main.c	/^const struct file_operations jiffies_fops = {$/;"	v	typeref:typename:const struct file_operations
+jiffies_read	ex07/main.c	/^static ssize_t jiffies_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+jiffies_write	ex07/main.c	/^static ssize_t jiffies_write(struct file *file, const char __user *buf, size_t count, loff_t *pp/;"	f	typeref:typename:ssize_t	file:
+kstrjoin	ex09/main.c	/^static void kstrjoin(unsigned char **buff, size_t *length, const char *str)$/;"	f	typeref:typename:void	file:
+list	ex09/main.c	/^    struct list_head list;$/;"	m	struct:mnt_namespace	typeref:struct:list_head	file:
+login	ex05/main.c	/^static const char login[9] = "vvaucoul";$/;"	v	typeref:typename:const char[9]	file:
+login	ex07/main.c	/^static const char login[9] = "vvaucoul";$/;"	v	typeref:typename:const char[9]	file:
+m_count	ex09/main.c	/^    int m_count;$/;"	m	struct:mountpoint	typeref:typename:int	file:
+m_dentry	ex09/main.c	/^    struct dentry *m_dentry;$/;"	m	struct:mountpoint	typeref:struct:dentry *	file:
+m_hash	ex09/main.c	/^    struct hlist_node m_hash;$/;"	m	struct:mountpoint	typeref:struct:hlist_node	file:
+m_list	ex09/main.c	/^    struct hlist_head m_list;$/;"	m	struct:mountpoint	typeref:struct:hlist_head	file:
+main	ex05/read_write_misc_char_device.c	/^int main(void)$/;"	f	typeref:typename:int
+main	ex07/main_debugfs_module_test.c	/^int main(void)$/;"	f	typeref:typename:int
+main	ex08/main_test_reverse.c	/^int main(void)$/;"	f	typeref:typename:int
+major	ex05/main.c	/^static int major = -1;$/;"	v	typeref:typename:int	file:
+misc	ex05/main.c	/^static struct miscdevice misc = {$/;"	v	typeref:struct:miscdevice	file:
+misc_cleanup	ex05/main.c	/^static void __exit misc_cleanup(void)$/;"	f	typeref:typename:void __exit	file:
+misc_init	ex05/main.c	/^static int __init misc_init(void)$/;"	f	typeref:typename:int __init	file:
+misc_read	ex05/main.c	/^static ssize_t misc_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+misc_write	ex05/main.c	/^static ssize_t misc_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+mnt	ex09/main.c	/^    struct vfsmount mnt;$/;"	m	struct:mount	typeref:struct:vfsmount	file:
+mnt_child	ex09/main.c	/^    struct list_head mnt_child;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_count	ex09/main.c	/^    int mnt_count;$/;"	m	struct:mnt_pcp	typeref:typename:int	file:
+mnt_count	ex09/main.c	/^    int mnt_count;$/;"	m	struct:mount	typeref:typename:int	file:
+mnt_devname	ex09/main.c	/^    const char *mnt_devname;$/;"	m	struct:mount	typeref:typename:const char *	file:
+mnt_expire	ex09/main.c	/^    struct list_head mnt_expire;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_expiry_mark	ex09/main.c	/^    int mnt_expiry_mark;$/;"	m	struct:mount	typeref:typename:int	file:
+mnt_fsnotify_marks	ex09/main.c	/^    struct fsnotify_mark_connector __rcu *mnt_fsnotify_marks;$/;"	m	struct:mount	typeref:struct:fsnotify_mark_connector __rcu *	file:
+mnt_fsnotify_mask	ex09/main.c	/^    __u32 mnt_fsnotify_mask;$/;"	m	struct:mount	typeref:typename:__u32	file:
+mnt_group_id	ex09/main.c	/^    int mnt_group_id;$/;"	m	struct:mount	typeref:typename:int	file:
+mnt_has_parent	ex09/main.c	/^static inline int mnt_has_parent(struct mount *mnt)$/;"	f	typeref:typename:int	file:
+mnt_hash	ex09/main.c	/^    struct hlist_node mnt_hash;$/;"	m	struct:mount	typeref:struct:hlist_node	file:
+mnt_id	ex09/main.c	/^    int mnt_id;$/;"	m	struct:mount	typeref:typename:int	file:
+mnt_instance	ex09/main.c	/^    struct list_head mnt_instance;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_list	ex09/main.c	/^    struct list_head mnt_list;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_llist	ex09/main.c	/^        struct llist_node mnt_llist;$/;"	m	union:mount::__anon07391330010a	typeref:struct:llist_node	file:
+mnt_master	ex09/main.c	/^    struct mount *mnt_master;$/;"	m	struct:mount	typeref:struct:mount *	file:
+mnt_mountpoint	ex09/main.c	/^    struct dentry *mnt_mountpoint;$/;"	m	struct:mount	typeref:struct:dentry *	file:
+mnt_mounts	ex09/main.c	/^    struct list_head mnt_mounts;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_mp	ex09/main.c	/^    struct mountpoint *mnt_mp;$/;"	m	struct:mount	typeref:struct:mountpoint *	file:
+mnt_mp_list	ex09/main.c	/^        struct hlist_node mnt_mp_list;$/;"	m	union:mount::__anon07391330020a	typeref:struct:hlist_node	file:
+mnt_namespace	ex09/main.c	/^struct mnt_namespace$/;"	s	file:
+mnt_ns	ex09/main.c	/^    struct mnt_namespace *mnt_ns;$/;"	m	struct:mount	typeref:struct:mnt_namespace *	file:
+mnt_parent	ex09/main.c	/^    struct mount *mnt_parent;$/;"	m	struct:mount	typeref:struct:mount *	file:
+mnt_pcp	ex09/main.c	/^    struct mnt_pcp __percpu *mnt_pcp;$/;"	m	struct:mount	typeref:struct:mnt_pcp __percpu *	file:
+mnt_pcp	ex09/main.c	/^struct mnt_pcp$/;"	s	file:
+mnt_pins	ex09/main.c	/^    struct hlist_head mnt_pins;$/;"	m	struct:mount	typeref:struct:hlist_head	file:
+mnt_rcu	ex09/main.c	/^        struct rcu_head mnt_rcu;$/;"	m	union:mount::__anon07391330010a	typeref:struct:rcu_head	file:
+mnt_share	ex09/main.c	/^    struct list_head mnt_share;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_slave	ex09/main.c	/^    struct list_head mnt_slave;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_slave_list	ex09/main.c	/^    struct list_head mnt_slave_list;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_stuck_children	ex09/main.c	/^    struct hlist_head mnt_stuck_children;$/;"	m	struct:mount	typeref:struct:hlist_head	file:
+mnt_umount	ex09/main.c	/^        struct hlist_node mnt_umount;$/;"	m	union:mount::__anon07391330020a	typeref:struct:hlist_node	file:
+mnt_umounting	ex09/main.c	/^    struct list_head mnt_umounting;$/;"	m	struct:mount	typeref:struct:list_head	file:
+mnt_writers	ex09/main.c	/^    int mnt_writers;$/;"	m	struct:mnt_pcp	typeref:typename:int	file:
+mnt_writers	ex09/main.c	/^    int mnt_writers;$/;"	m	struct:mount	typeref:typename:int	file:
+mount	ex09/main.c	/^struct mount$/;"	s	file:
+mountpoint	ex09/main.c	/^struct mountpoint$/;"	s	file:
+mounts	ex09/main.c	/^    unsigned int mounts;$/;"	m	struct:mnt_namespace	typeref:typename:unsigned int	file:
+mp_ops	ex09/main.c	/^static const struct proc_ops mp_ops = {$/;"	v	typeref:typename:const struct proc_ops	file:
+mp_read	ex09/main.c	/^static ssize_t mp_read(struct file *file, char __user *ubuf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+mp_write	ex09/main.c	/^static ssize_t mp_write(struct file *file, const char __user *ubuf, size_t count, loff_t *ppos)$/;"	f	typeref:typename:ssize_t	file:
+msg	ex07/main_debugfs_module_test.c	/^    char *msg;$/;"	m	struct:s_t_thread	typeref:typename:char *	file:
+my_exit	ex03/main.c	/^void my_exit(void)$/;"	f	typeref:typename:void
+my_init	ex03/main.c	/^int my_init(void)$/;"	f	typeref:typename:int
+myfd_cleanup	ex08/main.c	/^static void __exit myfd_cleanup(void)$/;"	f	typeref:typename:void __exit	file:
+myfd_device	ex08/main.c	/^static struct miscdevice myfd_device = {$/;"	v	typeref:struct:miscdevice	file:
+myfd_fops	ex08/main.c	/^static const struct file_operations myfd_fops = {$/;"	v	typeref:typename:const struct file_operations	file:
+myfd_init	ex08/main.c	/^static int __init myfd_init(void)$/;"	f	typeref:typename:int __init	file:
+myfd_read	ex08/main.c	/^ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)$/;"	f	typeref:typename:ssize_t
+myfd_write	ex08/main.c	/^ssize_t myfd_write(struct file *fp, const char __user *user, size_t size, loff_t *offs)$/;"	f	typeref:typename:ssize_t
+ns	ex09/main.c	/^    struct mnt_namespace *ns;$/;"	m	struct:proc_mounts	typeref:struct:mnt_namespace *	file:
+ns	ex09/main.c	/^    struct ns_common ns;$/;"	m	struct:mnt_namespace	typeref:struct:ns_common	file:
+ns_lock	ex09/main.c	/^    spinlock_t ns_lock;$/;"	m	struct:mnt_namespace	typeref:typename:spinlock_t	file:
+open_file	ex07/main_debugfs_module_test.c	/^static int open_file(const char *f_name, int flags)$/;"	f	typeref:typename:int	file:
+pending_mounts	ex09/main.c	/^    unsigned int pending_mounts;$/;"	m	struct:mnt_namespace	typeref:typename:unsigned int	file:
+poll	ex09/main.c	/^    wait_queue_head_t poll;$/;"	m	struct:mnt_namespace	typeref:typename:wait_queue_head_t	file:
+proc_mounts	ex09/main.c	/^struct proc_mounts$/;"	s	file:
+re	ex04/Makefile	/^re: clean all$/;"	t
+real_mount	ex09/main.c	/^static inline struct mount *real_mount(struct vfsmount *mnt)$/;"	f	typeref:struct:mount *	file:
+reload-udev	ex04/Makefile	/^reload-udev:$/;"	t
+root	ex09/main.c	/^    struct mount *root;$/;"	m	struct:mnt_namespace	typeref:struct:mount *	file:
+root	ex09/main.c	/^    struct path root;$/;"	m	struct:proc_mounts	typeref:struct:path	file:
+routine	ex07/main_debugfs_module_test.c	/^static void *routine(void *ptr)$/;"	f	typeref:typename:void *	file:
+s_t_thread	ex07/main_debugfs_module_test.c	/^typedef struct s_t_thread$/;"	s	file:
+seq	ex09/main.c	/^    u64 seq;$/;"	m	struct:mnt_namespace	typeref:typename:u64	file:
+show	ex09/main.c	/^    int (*show)(struct seq_file *, struct vfsmount *);$/;"	m	struct:proc_mounts	typeref:typename:int (*)(struct seq_file *,struct vfsmount *)	file:
+str	ex08/main.c	/^char str[PAGE_SIZE];$/;"	v	typeref:typename:char[]
+t_thread_test	ex07/main_debugfs_module_test.c	/^} t_thread_test;$/;"	t	typeref:struct:s_t_thread	file:
+test	ex05/Makefile	/^test:$/;"	t
+test	ex07/Makefile	/^test:$/;"	t
+test	ex08/Makefile	/^test:$/;"	t
+ucounts	ex09/main.c	/^    struct ucounts *ucounts;$/;"	m	struct:mnt_namespace	typeref:struct:ucounts *	file:
+usb_keyboard_exit	ex04/main.c	/^static void __exit usb_keyboard_exit(void)$/;"	f	typeref:typename:void __exit	file:
+usb_keyboard_init	ex04/main.c	/^static int __init usb_keyboard_init(void)$/;"	f	typeref:typename:int __init	file:
+user_ns	ex09/main.c	/^    struct user_namespace *user_ns;$/;"	m	struct:mnt_namespace	typeref:struct:user_namespace *	file:
