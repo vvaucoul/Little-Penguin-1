@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/mnt/nfs/homes/vvaucoul/Documents/github_vintz/Little-Penguin-1'
-make: Leaving directory '/mnt/nfs/homes/vvaucoul/Documents/github_vintz/Little-Penguin-1'
+make: Entering directory '/home/vintz/Documents/Github_Vintz/Little-Penguin-1'
+make: Leaving directory '/home/vintz/Documents/Github_Vintz/Little-Penguin-1'
  
 make: *** No targets specified and no makefile found.  Stop.
 
