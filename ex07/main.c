@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 12:36:52 by vvaucoul          #+#    #+#             */
-/*   Updated: 2022/06/07 15:03:54 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/06/08 19:35:09 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ MODULE_DESCRIPTION("A simple debug interface using debugfs");
 #define DFS_VIRTUAL_FILE_03 "foo"
 
 static const char login[9] = "vvaucoul";
+static const short login_length = 8;
 
 /*******************************************************************************
  *                                     ID                                      *
@@ -44,10 +45,11 @@ static ssize_t id_write(struct file *file, const char __user *buf, size_t count,
     ssize_t length;
 
     length = simple_write_to_buffer(tmp, sizeof(tmp), ppos, buf, count);
-    length -= 1;
-    if (length == strlen(login))
+    if (length > login_length)
+        return (-EINVAL);
+    if (length == login_length)
     {
-        if (memcmp(tmp, login, length) == 0)
+        if (memcmp(tmp, login, login_length) == 0)
             return (length);
     }
     return (-EINVAL);

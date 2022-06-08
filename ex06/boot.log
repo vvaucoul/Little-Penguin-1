@@ -1,4 +1,3 @@
-Jun  3 13:19:43 vvaucoul kernel: Loaded 129845 symbols from 1 module.
 Jun  3 13:19:43 vvaucoul kernel: [    0.000000] Linux version 5.18.0-next-20220603 (root@vv) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #1 SMP PREEMPT_DYNAMIC Fri Jun 3 13:06:12 CEST 2022
 Jun  3 13:19:43 vvaucoul kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-linux-next-kernel root=/dev/sda4 ro
 Jun  3 13:19:43 vvaucoul kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
