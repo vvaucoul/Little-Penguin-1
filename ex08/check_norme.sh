@@ -1,1 +1,2 @@
-/usr/src/linux-headers-5.4.0-113-generic/scripts/checkpatch.pl main.c -no-tree -file --strict
+#!/bin/bash
+/usr/src/linux-headers-$(uname -r)/scripts/checkpatch.pl main.c -no-tree -file --strict
