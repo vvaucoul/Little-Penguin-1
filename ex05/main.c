@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:15:09 by vvaucoul          #+#    #+#             */
-/*   Updated: 2022/06/03 12:45:03 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/06/08 19:32:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ MODULE_DESCRIPTION("A simple misc char driver");
 #define CLASS_NAME "ft"
 
 static const char login[9] = "vvaucoul";
+static const short login_length = 8;
 
 static ssize_t misc_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)
 {
-    return (simple_read_from_buffer(buf, count, ppos, login, strlen(login)));
+    return (simple_read_from_buffer(buf, count, ppos, login, login_length));
 }
 
 static ssize_t misc_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)
@@ -36,10 +37,11 @@ static ssize_t misc_write(struct file *file, const char __user *buf, size_t coun
     ssize_t length;
 
     length = simple_write_to_buffer(tmp, sizeof(tmp), ppos, buf, count);
-    length -= 1;
-    if (length == strlen(login))
+    if (length > login_length)
+        return (-EINVAL);
+    if (length == login_length)
     {
-        if (memcmp(tmp, login, length) == 0)
+        if (memcmp(tmp, login, login_length) == 0)
             return (length);
     }
     return (-EINVAL);
