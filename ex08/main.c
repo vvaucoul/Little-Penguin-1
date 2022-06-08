@@ -53,6 +53,8 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 
 	/**************** Malloc like a boss ***************/
 	tmp = kmalloc(sizeof(char) * PAGE_SIZE * 2, GFP_KERNEL);
+	if (!tmp)
+		return (-ENOMEM);
 	for (i = 0; i < strlen(str); i++)
 		tmp[i] = str[strlen(str) - i - 1];
 	tmp[i] = 0x0;

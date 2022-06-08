@@ -1,0 +1,1 @@
+cmd_/home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.ko /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.o /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.mod.o;  true

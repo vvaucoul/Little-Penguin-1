@@ -1,0 +1,1 @@
+cmd_/home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.mod := { echo  /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.o;  echo; } > /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.mod
