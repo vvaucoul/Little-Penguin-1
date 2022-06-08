@@ -1,1 +1,0 @@
-cmd_/home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/modules.order := {   echo /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/main.ko; :; } | awk '!x[$$0]++' - > /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/modules.order

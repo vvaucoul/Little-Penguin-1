@@ -1,1 +1,0 @@
-cmd_/home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/Module.symvers := sed 's/\.ko$$/\.o/' /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/modules.order | scripts/mod/modpost -m -a  -o /home/vintz/Documents/Github_Vintz/Little-Penguin-1/ex07/Module.symvers -e -i Module.symvers   -T -
