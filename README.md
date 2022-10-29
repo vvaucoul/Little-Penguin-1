@@ -13,3 +13,12 @@ With this project we are making some kernel modules, kernel compilations...<br><
 ```bash
 git clone https://github.com/vvaucoul/Little-Penguin-1 && cd Little-Penguin-1
 ```
+
+### Norme
+
+Be careful with kernel modules norme. You can find a norme checker for your modules directly in the kernel sources.<br>
+> **/usr/src/linux-4.x/scripts/checkpath.pl file.c -no-tree -file --strict**
+
+### Linux Kernel
+
+<a href="https://github.com/torvalds/linux">Linux Kernel</a>
